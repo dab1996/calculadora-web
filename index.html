@@ -3,18 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calculadora</title>
+  <title>Calculadora Científica</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
     <section class="calc" aria-label="Calculadora">
       <div class="display">
+        <button id="modo-angulo" class="modo" data-acao="angulo">DEG</button>
         <div id="expressao" class="expressao" aria-live="polite"></div>
         <div id="resultado" class="resultado">0</div>
       </div>
 
-      <div class="teclas">
+      <div class="teclas cientificas">
+        <button data-valor="sin(" class="sci">sin</button>
+        <button data-valor="cos(" class="sci">cos</button>
+        <button data-valor="tan(" class="sci">tan</button>
+        <button data-valor="pi" class="sci">π</button>
+        <button data-valor="e" class="sci">e</button>
+
+        <button data-valor="asin(" class="sci">sin⁻¹</button>
+        <button data-valor="acos(" class="sci">cos⁻¹</button>
+        <button data-valor="atan(" class="sci">tan⁻¹</button>
+        <button data-acao="quadrado" class="sci">x²</button>
+        <button data-valor="^" class="sci">xʸ</button>
+
+        <button data-valor="ln(" class="sci">ln</button>
+        <button data-valor="log(" class="sci">log</button>
+        <button data-valor="sqrt(" class="sci">√</button>
+        <button data-valor="cbrt(" class="sci">∛</button>
+        <button data-acao="inverso" class="sci">x⁻¹</button>
+
+        <button data-valor="exp(" class="sci">eˣ</button>
+        <button data-acao="dez" class="sci">10ˣ</button>
+        <button data-valor="abs(" class="sci">|x|</button>
+        <button data-valor="!" class="sci">n!</button>
+        <button data-valor="ans" class="sci">Ans</button>
+      </div>
+
+      <div class="teclas basicas">
         <button data-acao="limpar" class="fn">C</button>
         <button data-acao="apagar" class="fn" aria-label="Apagar">⌫</button>
         <button data-valor="%" class="fn">%</button>

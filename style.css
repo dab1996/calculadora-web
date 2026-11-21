@@ -55,14 +55,32 @@ body {
   padding: 20px;
 }
 
-.calc { width: 100%; max-width: 360px; }
+.calc { width: 100%; max-width: 400px; }
 
 .display {
   text-align: right;
   padding: 8px 4px 16px;
   min-height: 96px;
   overflow: hidden;
+  position: relative;
 }
+
+.modo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--fn);
+  background: none;
+  color: var(--suave);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  padding: 3px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modo:hover { color: var(--op); border-color: var(--op); }
 
 .expressao {
   color: var(--suave);
@@ -103,6 +121,18 @@ body {
 .teclas button:hover { background: var(--tecla-hover); }
 .teclas button:active, .teclas button.ativo { transform: scale(.94); }
 .teclas button:focus-visible { outline: 2px solid var(--op); outline-offset: 2px; }
+
+.teclas.cientificas {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.teclas .sci {
+  padding: 10px 0;
+  font-size: .95rem;
+  background: var(--fn);
+}
 
 .teclas .fn { background: var(--fn); }
 .teclas .op, .teclas .igual { background: var(--op); color: var(--op-texto); }
